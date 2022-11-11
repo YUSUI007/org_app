@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+/* 
+Top Content
+--------------------------*/
+#contact_page {
+    background: #192F60;
+    padding: 165px 4% 15% 4%;
+}
+
+/* 
+コンタクトフォーム
+--------------------------*/
+#contact_form {
+    background: #FFFFFF;
+    margin: -13% 4% 4% 4%;
+    padding: 8% 23%;
+}
+
+/* 各項目の間隔をあける */
+form div {
+    margin: 5% auto;
+}
+
+/* 横並び防止 */
+.form_title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #192F60;
+}
+
+/* 必須アイコン */
+.form_title span {
+    background-color: #BA1C1C;
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 2px 7px;
+    margin-left: 10px;
+}
+
+/* ラジオボタンの改行防止 */
+.adopt_area label {
+    white-space: nowrap;
+}
+
+/* 各ラジオボタンの間隔 */
+input[type="radio"] {
+    margin-left: 3%;
+    margin-right: 5px;
+}
+
+/* 枠をつける */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: solid 1px #C4C4C4;
+    padding: 2%;
+    width: 100%;
+}
+
+/* 姓と名の横並び */
+.name_flex {
+    display: flex;
+    gap: 3%;
+    margin-top: auto;
+}
+
+/* placeholderの色を変える */
+::placeholder {
+    color: #C4C4C4;
+}
+
+/* hrはボーダーとして設定する */
+.form_line {
+    border-style: none;
+    border-top: 1px solid #EDEEF0;
+}
+
+/* 個人情報保護方針 */
+.policy_area {
+    text-align: center;
+}
+
+/* アンカーリンク */
+.policy_link {
+    text-decoration: underline;
+    color: #219AC8;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* 同意する全体 */
+.checkbox_text {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3%;
+    position: relative;
+}
+
+/* 四角のチェックボックスの作成 */
+.checkbox_text::before {
+    content: '';
+    border: 1px solid #DDD;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-right: 10px;
+}
+
+/* チェック済みのときにチェックマークを表示 */
+input[type="checkbox"]:checked+.checkbox_text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 10px;
+    margin: auto;
+    width: 10px;
+    height: 15px;
+    border-right: 2px solid #7D7F86;
+    border-bottom: 2px solid #7D7F86;
+    transform: rotate(45deg);
+}
+
+/* 送信ボタン */
+.submit_btn {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: #192F60;
+    padding: 3% 20%;
+    margin: 12% auto 0 auto;
+    transition: all 0.3s ease-out;
+}
+
+.submit_btn:hover {
+    background-color: #192F6000;
+    outline: solid 1px #192F60;
+    color: #192F60;
+}
+
+/* 
+タブレット版
+--------------------------*/
+@media (max-width: 960px) {
+    #contact_form {
+        padding: 8% 10%;
+    }
+}

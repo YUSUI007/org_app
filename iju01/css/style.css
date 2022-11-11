@@ -1,0 +1,782 @@
+@charset "UTF-8";
+
+/* 
+共通部分
+--------------------------*/
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 37px;
+    color: #7D7F86;
+    background: #FAFAFA;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #192F60;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* コンテンツ全体に対する指定 */
+.wrapper {
+    margin: 0 auto;
+    padding: 0 4%;
+    /*余白指定*/
+}
+
+/* HOME以外のTOP共通 */
+.top_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HOME以外のTOP共通 */
+.top_title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+    color: #192F60;
+    background-color: #FFFFFF;
+    padding: 40px 60px;
+    position: relative;
+}
+
+/* 日本語 小 */
+.top_title span {
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* タイトル中間線 */
+.title_line span::before {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #192F60;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 
+Header
+--------------------------*/
+/* ロゴとメニューの横並び */
+.page_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FAFAFA;
+    width: 100%;
+    height: 100px;
+    border-top: 10px solid #192F60;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* ロゴとテキストのリンク */
+.logo_link {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+}
+
+/* ロゴ */
+.logo {
+    width: 53px;
+    vertical-align: middle;
+}
+
+/* ロゴテキスト */
+.logo_link span {
+    vertical-align: middle;
+}
+
+/* メニューの横並び */
+.menu_nav {
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 3% 0;
+}
+
+.menu_nav li {
+    margin-left: 61px;
+}
+
+/* ホバー時のための設定 */
+.menu_nav li a {
+    position: relative;
+    display: inline-block;
+}
+
+/* ホバー時に下線を引く */
+.menu_nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #192F60;
+    height: 1px;
+}
+
+/* ホバー時に下線を100%まで伸ばす */
+.menu_nav li:hover a::after {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Contactボタン */
+.contact_btn {
+    background-color: #192F60;
+    transition: all 0.3s;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.contact_btn a {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.contact_btn:hover {
+    background-color: #192F6000;
+    outline: solid 1px #192F60;
+}
+
+.contact_btn:hover a {
+    color: #192F60;
+}
+
+.contact_btn:hover a::after {
+    content: none;
+}
+
+/*
+main Visual
+--------------------------*/
+.main_content {
+    padding-top: 100px;
+    height: 100vh;
+}
+
+/* 未来を変えるチカラ */
+.content_title {
+    font-size: 40px;
+    color: #192F60;
+    background-color: #FFFFFF;
+    line-height: 58px;
+    padding: 60px;
+    margin-left: -13%;
+    z-index: 1;
+}
+
+/* 英語 小 */
+.content_title span {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: right;
+    margin-top: 10%;
+}
+
+/* 背景付きflex */
+.big_bg {
+    background-image: url(../images/top.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 85%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    position: relative;
+}
+
+/* 背景画像に色を重ねる */
+.big_bg::after {
+    content: '';
+    background-color: #7D8ABA7A;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 80vh;
+}
+
+/* 英語テキスト 大 */
+.big_bg h2 {
+    color: #FAFAFA;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14.5vh;
+    line-height: 35vh;
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    margin-top: 3px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.big_bg h2 span {
+    margin-right: -0.04em;
+}
+
+/* 
+about
+--------------------------*/
+/* 背景 */
+#about {
+    position: relative;
+    background-color: #EDEEF0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+/* 背景台形 */
+.about_content::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(0% 100%, 81% 0%, 100% 0%, 100% 100%);
+    background-color: #192F60;
+}
+
+/* ページタイトルとキャプションの横並び */
+.about_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about .content_title {
+    margin-left: 0;
+    width: 350px;
+}
+
+.about_right {
+    width: 60%;
+    padding: 3%;
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* キャプション */
+.caption_set {
+    padding: 5%;
+    position: relative;
+}
+
+/* 鉤括弧 */
+.caption_set::before,
+.caption_set::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.caption_set::before {
+    border-left: solid 1px #192F60;
+    border-top: solid 1px #192F60;
+    top: 0;
+    left: 0;
+}
+
+.caption_set::after {
+    border-right: solid 1px #192F60;
+    border-bottom: solid 1px #192F60;
+    bottom: 0;
+    right: 0;
+}
+
+/* わたしたちNTについて */
+.section_title {
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.09em;
+    color: #192F60;
+}
+
+/* 詳細文 */
+.caption_set p {
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-top: 6%;
+}
+
+/* アンカーボタン */
+.button {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: fit-content;
+    margin: auto;
+    margin-right: 0;
+}
+
+/* ボタンアイコン */
+.fa-circle-right {
+    font-size: 31px;
+}
+
+/* 
+service
+--------------------------*/
+#service {
+    margin-top: 3%;
+    padding-bottom: 4%;
+}
+
+/* 画像とキャプションの横並び */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* キャプションの調整 */
+.service_content .caption_set {
+    width: 850px;
+    padding: 8% 4%;
+}
+
+/* 鉤括弧の位置調整 */
+.service_content .caption_set::before,
+.service_content .caption_set::after {
+    margin: 3% auto;
+}
+
+.box .section_title {
+    font-size: min(3vw, 32px);
+}
+
+.box img {
+    width: 36%;
+}
+
+
+/* 
+News
+--------------------------*/
+#news {
+    position: relative;
+    background-color: #EDEEF0;
+    padding: 5% 4%;
+}
+
+/* 背景台形 */
+.news_content::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0% 100%, 0% 0%, 19% 0%, 100% 100%);
+    background-color: #192F60;
+}
+
+/* News */
+.page_title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+    color: #192F60;
+    width: fit-content;
+    background-color: #FFFFFF;
+    line-height: 58px;
+    padding: 2% 5%;
+    position: relative;
+}
+
+/* 左上鉤括弧 */
+.page_title::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin: 8%;
+    border-left: solid 1px #192F60;
+    border-top: solid 1px #192F60;
+    top: 0;
+    left: 0;
+}
+
+/* 記事グリッド */
+.news_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "big big item2 item3"
+        "big big item4 item5";
+    margin: 1px;
+    padding-top: 2%;
+}
+
+.big_item {
+    grid-area: big;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+/* 各記事 */
+.item {
+    position: relative;
+    outline: solid 1px #FFFFFF;
+}
+
+/* imgに色を重ねる処理 */
+.item a {
+    display: block;
+    background-color: #7D7F86;
+}
+
+.item img {
+    object-fit: cover;
+    vertical-align: top;
+    mix-blend-mode: color-burn;
+}
+
+.item .news_header {
+    position: absolute;
+    bottom: 0;
+}
+
+/* 記事日付 */
+.item .day {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin: 0 3% 1%;
+}
+
+/* 記事タイトル */
+.item h3 {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    margin: 0 3% 3%;
+}
+
+/* 記事大 日付 */
+.big_item .day {
+    font-size: 1.2rem;
+}
+
+/* 記事大 見出し */
+.big_item h3 {
+    font-size: 1.5rem;
+    line-height: 1.3em;
+}
+
+/* ニュース一覧ボタン */
+#news .button {
+    margin-top: 2%;
+}
+
+/*
+Contact
+--------------------------*/
+#contact {
+    margin-top: 3%;
+    background-color: #192F60;
+    position: relative;
+}
+
+#contact::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin: 4%;
+    border-left: solid 1px #FFFFFF;
+    border-top: solid 1px #FFFFFF;
+    top: 0;
+    left: 0;
+}
+
+.contact_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact_content .section_title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: min(2.9vw, 34px);
+}
+
+.contact_left p {
+    color: #FFFFFF;
+    margin-top: 3%;
+}
+
+.contact_button {
+    color: #FFFFFF;
+    background-color: #219AC8;
+    padding: 3% 10%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+    transition: all 0.3s;
+}
+
+.contact_button:hover {
+    background-color: #FFFFFF;
+    color: #219AC8;
+    outline: solid 3px #219AC8;
+}
+
+.contact_right {
+    width: 21%;
+    display: flex;
+    justify-content: center;
+    margin: 4%;
+}
+
+.contact_right img:first-child {
+    width: 80%;
+    margin-bottom: 30%;
+}
+
+.contact_right img:last-child {
+    width: 80%;
+    margin-top: 30%;
+}
+
+/* 
+footer
+--------------------------*/
+.page_footer {
+    border-bottom: 10px solid #192F60;
+    width: 100%;
+    text-align: center;
+}
+
+.footer_flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 3% auto;
+}
+
+.footer_flex a {
+    font-size: 32px;
+}
+
+.footer_flex .logo {
+    width: 95px;
+}
+
+.footer_menu_nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+}
+
+.footer_menu_nav li {
+    margin-bottom: 10%;
+}
+
+.footer_menu_nav li:first-child {
+    order: 1;
+}
+
+.footer_menu_nav li:nth-child(2) {
+    order: 3;
+}
+
+.footer_menu_nav li:nth-child(3) {
+    order: 5;
+}
+
+.footer_menu_nav li:nth-child(4) {
+    order: 2;
+}
+
+.footer_menu_nav li:last-child {
+    order: 4;
+}
+
+.footer_menu_nav a {
+    font-size: 16px;
+}
+
+/* 
+タブレット版
+--------------------------*/
+@media (max-width: 960px) {
+
+    /* Header */
+    .logo_link {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .menu_nav li {
+        margin-left: 30px;
+    }
+
+    /* メインビジュアル英語大 */
+    .big_bg h2 {
+        font-size: 9.5vh;
+        line-height: 36.7vh;
+    }
+
+    /* About */
+    .about_right {
+        width: 50%;
+    }
+
+    #about .content_title {
+        font-size: max(3vw, 20px);
+        width: 40%;
+    }
+
+    #about .content_title span {
+        font-size: 10px;
+    }
+
+    /* わたしたちNTについて */
+    .section_title {
+        font-size: min(3vw, 30px);
+    }
+
+    #about .content_title span {
+        font-size: 10px;
+    }
+
+    /* Service */
+    #service {
+        margin-top: 6%;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .service_content .caption_set {
+        width: auto;
+        order: 1;
+        padding: 8% 9%;
+    }
+
+    .box .section_title {
+        font-size: 32px;
+    }
+
+    .box img {
+        width: 60%;
+        margin: auto;
+        order: 2;
+    }
+
+    /* News */
+    .item .day {
+        font-size: 10px;
+    }
+
+    .item h3 {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .big_item .day {
+        font-size: 1rem;
+    }
+
+    .big_item h3 {
+        font-size: 1rem;
+        line-height: 1.3em;
+    }
+
+    /* Contact */
+    #contact {
+        padding: 4%;
+    }
+
+    .contact_left {
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+    .contact_content .section_title {
+        font-size: max(3vw, 19px);
+    }
+
+    /* Footer */
+    .footer_flex a {
+        font-size: 20px;
+    }
+
+    .footer_flex .logo {
+        width: 72px;
+    }
+}

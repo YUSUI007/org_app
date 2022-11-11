@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* 
+Top Content
+--------------------------*/
+#post_page {
+    background: #192F60;
+    padding: 165px 4% 15% 4%;
+}
+/* ニュースタブ */
+.news_nav {
+    align-self: flex-end;
+}
+/* TOP NEWS横並び */
+.news_nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40%;
+}
+/* 縦線対応 */
+.news_nav li:first-child {
+    position: relative;
+}
+/* 縦線 */
+.news_nav li:first-child::after {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 140%;
+    margin: auto;
+}
+/* ホバー時に100%まで下線を伸ばす */
+.news_nav li:hover a::after {
+    width: 100%;
+}
+/* タブテキストの色 */
+.news_nav a {
+    color: #FFFFFF;
+    position: relative;
+}
+/* ホバー時下線の設定 */
+.news_nav a::after {
+    content: '';
+    position: absolute;
+    background-color: #FFFFFF;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 
+記事内容
+--------------------------*/
+#news_post {
+    background: #FFFFFF;
+    margin: -13% 4% 4% 4%;
+    padding: 10%;
+}
+/* 日付とカテゴリーの横並び */
+.category_flex {
+    display: flex;
+    gap: 3%;
+}
+/* カテゴリー */
+.category {
+    border: solid 1px #C4C4C4;
+    padding: 0 2%;
+}
+/* 記事タイトル */
+.post_title {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    color: #192F60;
+    margin-top: 40px;
+}
+.post_content img {
+    margin-top: 40px;
+}
+.post_text {
+    color: #192F60;
+    text-align: left;
+    margin-top: 20px;
+}
+/* hrはボーダーとして設定する */
+.post_line {
+    border-style: none;
+    border-top: 1px solid #C4C4C4;
+    margin-top: 20%;
+}
+.button {
+    margin-left: 0;
+    margin-top: 40px;
+}
