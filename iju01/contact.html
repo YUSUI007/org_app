@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NT Corporationsは岩手県八幡平市に工場を構える金属加工メーカーです。社員みんなが楽しく、一緒に考えて働く環境のもとものづくりを行う取り組みを紹介します。">
+    <title>iju association</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header id="menu" class="page_header wrapper">
+        <h1>
+            <a href="index.html" class="logo_link">
+                <img src="images/logo.webp" alt="NT Corporationsのロゴ" class="logo">
+                <span>iju association</span>
+            </a>
+        </h1>
+        <nav class="menu_content">
+            <ul class="menu_nav">
+                <li><a href="index.html">Top</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="company.html">New Life</a></li>
+                <li class="contact_btn"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="contact_page" class="top_content wrapper">
+        <h2 class="top_title title_line">
+            Contact
+            <span>お問い合わせ</span>
+        </h2>
+    </div>
+
+    <section id="contact_form" class="wrapper">
+        <p>各自治体へのお問い合わせはこちらからお願いいたします。</p>
+        <form action="#" method="post">
+            <div class="adopt_area">
+                <label class="form_title">お問い合わせ項目 <span>必須</span></label>
+                <label for="adopt">
+                    <input type="radio" id="adopt" name="selection" value="0" required>相談会について
+                </label>
+                <label for="product">
+                    <input type="radio" id="product" name="selection" value="1">就職について
+                </label>
+                <label for="internship">
+                    <input type="radio" id="internship" name="selection" value="2">住宅・サポート体制について
+                </label>
+                <label for="factory">
+                    <input type="radio" id="factory" name="selection" value="3">体験移住について
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="selection" value="4">その他
+                </label>
+            </div>
+
+            <div>
+                <label for="email" class="form_title">希望自治体名 <span>必須</span></label>
+                <input type="text" name="your_municipality_name" required>
+            </div>
+
+            <div>
+                <label class="form_title">お名前 <span>必須</span></label>
+                <div class="name_flex">
+                    <input type="text" name="your_family_name" placeholder="姓" required>
+                    <input type="text" name="your_given_name" placeholder="名" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="form_title">メールアドレス <span>必須</span></label>
+                <input type="email" id="email" name="your_email" required>
+            </div>
+
+            <div>
+                <label for="message" class="form_title">お問い合わせ内容 <span>必須</span></label>
+                <textarea id="message" name="your_message" maxlength="300" rows="10" placeholder="300文字以内で入力" required></textarea>
+            </div>
+
+            <hr class="form_line">
+
+            <div class="policy_area">
+                <p>
+                    <a href="" class="policy_link">個人情報保護方針</a>に同意していただける方はチェックを入れてください。
+                </p>
+                <input type="checkbox" id="check" name="your_check" required>
+                <label for="check" class="checkbox_text">同意する</label>
+            </div>
+            <input type="submit" class="submit_btn" value="送信">
+        </form>
+    </section>
+
+    <footer id="footer" class="page_footer wrapper">
+        <div class="footer_flex">
+            <h1>
+                <a href="index.html" class="logo_link">
+                    <img src="images/logo.webp" alt="NT Corporationsのロゴ" class="logo">
+                    <span>iju association</span>
+                </a>
+            </h1>
+            <nav>
+                <ul class="menu_nav footer_menu_nav">
+                    <li><a href="index.html">Top</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="company.html">New Life</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">プライバシーポリシー</a></li>
+                </ul>
+            </nav>
+        </div>
+        <small>&copy; iju association 2022</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+/* 
+Top Content
+--------------------------*/
+#news_page {
+    background: #192F60;
+    padding: 165px 4% 15% 4%;
+}
+/* ニュースタブ */
+.news_nav {
+    align-self: flex-end;
+}
+/* TOP NEWS横並び */
+.news_nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40%;
+}
+/* 縦線対応 */
+.news_nav li:first-child {
+    position: relative;
+}
+/* 縦線 */
+.news_nav li:first-child::after {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 140%;
+    margin: auto;
+}
+/* ホバー時に100%まで下線を伸ばす */
+.news_nav li:hover a::after {
+    width: 100%;
+}
+/* タブテキストの色 */
+.news_nav a {
+    color: #FFFFFF;
+    position: relative;
+}
+/* ホバー時下線の設定 */
+.news_nav a::after {
+    content: '';
+    position: absolute;
+    background-color: #FFFFFF;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 
+News List
+--------------------------*/
+#news_list {
+    background: #FFFFFF;
+    margin: -13% 4% 4% 4%;
+    padding: 4%;
+}
+.news_list_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 1rem;
+    margin: 5%;
+}
+.news_list_item img {
+    border: solid 1px #192F60;
+    width: 100%;
+    height: 14vw;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.3s ease-in-out;
+}
+.news_list_item:hover img {
+    transform: scale(1.1);
+    border-color: #7D7F86;
+}
+.news_list_item:hover .day {
+    color: #7D7F86;
+}
+.news_list_item h3 {
+    line-height: normal;
+}
+.news_list_item:hover h3 {
+    color: #7D7F86;
+}
+/* ページネーション */
+.pagination {
+    margin-left: 5%;
+    margin-top: 8%;
+    display: flex;
+}
+.pagination li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #192F60;
+    margin-right: 3%;
+    position: relative;
+    background-color: #FFFFFF;
+    transition: all 0.3s;
+}
+.pagination li:hover {
+    background-color: #192F60;
+}
+/* ホバー時のアンカータグ */
+.pagination li:hover a {
+    color: #FFFFFF;
+}
+.pagination li a {
+    display: block;
+}
+/* 現在地のページネーション処理 */
+.pagination .this {
+    border: solid 1px #192F60;
+    pointer-events: none;
+}
+/* 2つ目のページネーション処理 */
+.pagination li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+/* 鉤括弧 */
+.pagination_hover::before,
+.pagination_hover::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: all 0.2s linear;
+}
+.pagination_hover::before {
+    border-left: solid 1px #192F60;
+    border-top: solid 1px #192F60;
+    left: 0;
+    top: 0;
+    transition-duration: 0.2s;
+}
+.pagination_hover::after {
+    border-right: solid 1px #192F60;
+    border-bottom: solid 1px #192F60;
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.2s;
+}
+/* ホバー時に100%線が伸びる */
+.pagination_hover:hover::before,
+.pagination_hover:hover::after {
+    width: 100%;
+    height: 100%;
+}
+/* 
+タブレット版
+--------------------------*/
+@media (max-width: 960px) {
+    .news_list_item h3 {
+        font-size: 1rem;
+    }
+}

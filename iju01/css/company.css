@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* 
+共通
+--------------------------*/
+/* 中タイトル */
+.company_title {
+    font-size: 36px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    background-color: unset;
+}
+
+/* 小タイトル */
+.company_title span {
+    text-align: inherit;
+    margin-top: 5px;
+}
+
+/* 
+Top Content
+--------------------------*/
+#company_page {
+    background: #192F60;
+    padding: 165px 4% 15% 4%;
+}
+
+/* 
+Company Index
+--------------------------*/
+#company_index {
+    background-color: #FFFFFF;
+    padding: 66px 84px;
+    text-align: center;
+    width: fit-content;
+    margin-top: -150px;
+}
+
+#company_index.caption_set::before,
+#company_index.caption_set::after {
+    margin: 3%;
+}
+
+/* 見出し */
+#company_index .company_title {
+    font-size: 24px;
+    color: #192F60;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* 文章 */
+#company_index p {
+    text-align: left;
+    margin: auto;
+}
+
+/* 
+Philosophy
+--------------------------*/
+#philosophy {
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 4%;
+    margin-top: 3%;
+}
+
+#philosophy .company_title {
+    text-align: center;
+}
+
+.philosophy_flex {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.philosophy_item {
+    width: 288px;
+    height: 288px;
+    background-color: #192F60;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.philosophy_item h3 {
+    font-size: 40px;
+}
+
+.philosophy_item p {
+    margin-top: 20px;
+}
+
+/* 
+Delegate
+--------------------------*/
+#delegate {
+    margin: 78px auto;
+}
+
+/* メッセージと画像の横並び */
+.delegate_flex {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.delegate_left {
+    text-align: justify;
+    width: 40%;
+}
+
+.delegate_left p {
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+}
+
+.delegate_left p:first-of-type {
+    margin-top: 10%;
+}
+
+.delegate_flex img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 
+Outline
+--------------------------*/
+/* 会社概要全体 */
+#outline {
+    margin: 150px 30%;
+}
+
+.outline_list {
+    margin-top: 10%;
+}
+
+.outline_list dt {
+    float: left;
+    font-weight: 700;
+    letter-spacing: 0.7em;
+}
+
+.outline_list dd {
+    margin-left: 170px;
+    letter-spacing: 0.03em;
+}
+
+.outline_hr::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #EDEEF0;
+    margin: 3% 0;
+}
+
+/* 
+Location
+--------------------------*/
+#location {
+    background-color: #FFFFFF;
+    padding: 4%;
+}
+
+#location .company_title {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
+.location_map {
+    margin-top: 3%;
+}
+
+/* 
+タブレット版
+--------------------------*/
+@media (max-width: 960px) {
+    #company_index {
+        margin-top: -13%;
+        width: 80%;
+    }
+
+    /* 円形背景 */
+    .philosophy_item {
+        width: 27vw;
+        height: 27vw;
+    }
+
+    /* 文章 */
+    .philosophy_item p {
+        font-size: max(1.6vw, 12px);
+    }
+
+    .delegate_flex {
+        gap: 1rem;
+    }
+
+    .delegate_left {
+        width: 60%;
+    }
+
+    .delegate_flex img {
+        width: 40%;
+    }
+
+    #outline {
+        margin: 150px 25%;
+    }
+}
