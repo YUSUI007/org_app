@@ -208,7 +208,7 @@ main Visual
     display: block;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 15px;
     letter-spacing: 0.03em;
     text-align: right;
@@ -292,7 +292,7 @@ about
 
 #about .content_title {
     margin-left: 0;
-    width: 350px;
+    width: 400px;
 }
 
 .about_right {
@@ -348,7 +348,7 @@ about
 
 /* アンカーボタン */
 .button {
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.1em;
     display: flex;
     align-items: center;
@@ -709,7 +709,7 @@ footer
     }
 
     #about .content_title span {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     /* Service */
@@ -780,3 +780,4 @@ footer
         width: 72px;
     }
 }
+
