@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
-<?php include_once __DIR__ . '/../common/_head.html' ?>
+<?php include_once __DIR__ . '/common/_head.html' ?>
 <body>
-    <?php include_once __DIR__ . '/../common/_header.php' ?>
+    <?php include_once __DIR__ . '/common/_header.php' ?>
 
     <main class="content_center wrapper">
         <div class="signup_content">
@@ -22,6 +22,6 @@
         </div>
     </main>
 
-    <?php include_once __DIR__ . '/../common/_footer.html' ?>
+    <?php include_once __DIR__ . '/common/_footer.html' ?>
 </body>
 </html>

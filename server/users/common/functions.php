@@ -139,7 +139,7 @@ function user_login($user)
 {
     $_SESSION['current_user']['id'] = $user['id'];
     $_SESSION['current_user']['name'] = $user['name'];
-    header('Location: /photo_app/photos/index.php');
+    header('Location: /org_app/users/index.php');
     exit;
 }
 
@@ -179,7 +179,7 @@ function insert_photo($user_id, $image_name, $description)
 
         $sql = <<<EOM
         INSERT INTO 
-            photos
+            users
             (user_id ,image, description) 
         VALUES 
             (:user_id, :image, :description);
@@ -199,18 +199,18 @@ function insert_photo($user_id, $image_name, $description)
 
 }
 
-function find_photos_all()
+function find_users_all()
 {
     $dbh = connect_db();
 
-    $sql = 'SELECT * FROM photos';
+    $sql = 'SELECT * FROM users';
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function find_photo_by_id($id)
+function find_users_by_id($id)
 {
     $dbh = connect_db();
 
@@ -218,7 +218,7 @@ function find_photo_by_id($id)
     SELECT 
         * 
     FROM 
-        photos 
+        users
     WHERE 
         id = :id;
     EOM;
