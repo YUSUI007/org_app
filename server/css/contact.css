@@ -4,7 +4,7 @@
 Top Content
 --------------------------*/
 #contact_page {
-    background: #192F60;
+    background: #326019;
     padding: 165px 4% 15% 4%;
 }
 
@@ -27,7 +27,7 @@ form div {
     display: block;
     font-size: 18px;
     font-weight: 700;
-    color: #192F60;
+    color: #326019
 }
 
 /* 必須アイコン */
@@ -134,7 +134,7 @@ input[type="checkbox"]:checked+.checkbox_text::after {
     font-size: 18px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
-    background-color: #192F60;
+    background-color: #326019;
     padding: 3% 20%;
     margin: 12% auto 0 auto;
     transition: all 0.3s ease-out;
