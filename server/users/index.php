@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/common/functions.php';
+require_once __DIR__ . '/../common/functions.php';
 
 // セッション開始
 session_start();
@@ -17,10 +17,10 @@ if (isset($_SESSION['current_user'])) {
 
 <!DOCTYPE html>
 <html lang="ja">
-<?php include_once __DIR__ . '/common/_head.html' ?>
+<?php include_once __DIR__ . '/../common/_head.html' ?>
 
 <body>
-    <?php include_once __DIR__ . '/common/_header.php' ?>
+    <?php include_once __DIR__ . '/../common/_header.php' ?>
     <main class="article_index wrapper">
         <div class="grid" data-masonry='{"columnWidth": 270, "itemSelector": ".grid_item", "isFitWidth": true}'>
             <?php if (!empty($users)) : ?>
@@ -38,7 +38,7 @@ if (isset($_SESSION['current_user'])) {
         </a>
     </main>
 
-    <?php include_once __DIR__ . '/common/_footer.html' ?>
+    <?php include_once __DIR__ . '/../common/_footer.html' ?>
 
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
