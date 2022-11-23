@@ -66,7 +66,7 @@ img {
     content: '';
     width: 40px;
     height: 2px;
-    background: #192F60;
+    background: #326019;
     position: absolute;
     left: 0;
     right: 0;
@@ -145,7 +145,7 @@ Header
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #192F60;
+    background-color: #326019;
     height: 1px;
 }
 
@@ -157,7 +157,7 @@ Header
 
 /* Contactボタン */
 .contact_btn {
-    background-color: #192F60;
+    background-color: #326019;
     transition: all 0.3s;
     width: 200px;
     height: 40px;
@@ -172,7 +172,7 @@ Header
 }
 
 .contact_btn:hover {
-    background-color: #192F6000;
+    background-color: #326019;
     outline: solid 1px #192F60;
 }
 
@@ -201,6 +201,8 @@ main Visual
     padding: 60px;
     margin-left: -13%;
     z-index: 1;
+    border-radius: 20px 20px;
+
 }
 
 /* 英語 小 */
@@ -280,7 +282,7 @@ about
     bottom: 0;
     right: 0;
     clip-path: polygon(0% 100%, 81% 0%, 100% 0%, 100% 100%);
-    background-color: #192F60;
+    background-color: #326019;
 }
 
 /* ページタイトルとキャプションの横並び */
@@ -418,7 +420,7 @@ News
     bottom: 0;
     left: 0;
     clip-path: polygon(0% 100%, 0% 0%, 19% 0%, 100% 100%);
-    background-color: #192F60;
+    background-color: #326019;
 }
 
 /* News */
@@ -441,7 +443,7 @@ News
     position: absolute;
     margin: 8%;
     border-left: solid 1px #192F60;
-    border-top: solid 1px #192F60;
+    border-top: solid 1px #196039;
     top: 0;
     left: 0;
 }
@@ -541,7 +543,7 @@ Contact
 --------------------------*/
 #contact {
     margin-top: 3%;
-    background-color: #192F60;
+    background-color: #326019;
     position: relative;
 }
 
@@ -576,7 +578,7 @@ Contact
 
 .contact_button {
     color: #FFFFFF;
-    background-color: #219AC8;
+    background-color: #b489d1;
     padding: 3% 10%;
     font-weight: 700;
     font-size: 1.5rem;
@@ -588,8 +590,8 @@ Contact
 
 .contact_button:hover {
     background-color: #FFFFFF;
-    color: #219AC8;
-    outline: solid 3px #219AC8;
+    color: #9446c8;
+    outline: solid 3px #9446c8;
 }
 
 .contact_right {
@@ -798,13 +800,17 @@ main {
     margin: 0;
     padding: 0 4%;
 }
-.page_header {
-    background-color: #000000;
+.page_header01 {
+    background-color: #1f5226;
     display: flex;
     height: 80px;
     align-items: center;
     justify-content: space-between;
 }
+.header_login_button{
+    color:#DDDDDD
+}
+
 .logo {
     text-decoration: none;
     color: #FFFFFF;
@@ -813,7 +819,7 @@ main {
     color: #FFFFFF;
     font-size: 1.8rem;
 }
-.page_footer {
+.page_footer01 {
     height: 70px;
     background-color: #D2D2D2;
     width: 100%;
@@ -821,11 +827,19 @@ main {
     justify-content: center;
     align-items: center;
 }
-.footer-text {
+.footer-text01 {
     color: #FFFFFF;
     font-size: 1rem;
 }
-
+.errors {
+    margin: 10px 0;
+}
+.errors li {
+    margin-top: 5px;
+    color: #EC008C;
+    text-align: center;
+    list-style: none;
+}
 
 
 /* upload.php */
@@ -886,7 +900,7 @@ main {
 }
 
 /* index.php */
-.article {
+.article_index {
     margin: 5% 0;
 }
 .grid {
@@ -996,7 +1010,7 @@ input[type="password"]::placeholder {
     justify-content: space-between;
 }
 .signup_button {
-    background: #239BED;
+    background: #b723ed;
     padding: 15px 0;
     width: 48%;
     color: #FFFFFF;
@@ -1008,7 +1022,7 @@ input[type="password"]::placeholder {
     text-align: center;
     padding: 15px 0;
     width: 48%;
-    background: #000000;
+    background: #1f5226;
     color: #FFFFFF;
     border-radius: 30px;
     text-decoration: none;

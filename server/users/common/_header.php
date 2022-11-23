@@ -1,7 +1,7 @@
-<header class="page_header wrapper">
+<header class="page_header01 wrapper">
     <h1>
-        <a class="logo" href="/photo_app/users/index.php">
-            PHOTO LIST
+        <a class="logo" href="/org_app/users/index.php">
+            ユーザーリスト
         </a>
     </h1>
     <div class="right_content">
@@ -12,9 +12,9 @@
                 </p>
                 <a class="header_logout_button" href="/org_app/users/logout.php" class="nav-link">ログアウト</a>
             <?php else : ?>
-                <a class="header_login_button" href="/org_app/users/login.php" class="nav-link">ログイン</a>
+                <a class="header_login_button" href="login.php" class="nav-link">ログイン</a>
             <?php endif; ?>
-            <a class="home_icon" href="/org_app/users/index.php">
+            <a class="home_icon" href="/">
                 <i class="fa-solid fa-house"></i>
             </a>
         </div>

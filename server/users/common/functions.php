@@ -172,7 +172,7 @@ function check_file_ext($upload_file)
     }
 }
 
-function insert_photo($user_id, $image_name, $description)
+function insert_inquiry($user_id, $image_name, $description)
 {
     try {
         $dbh = connect_db();
