@@ -1,6 +1,6 @@
 <?php
 // 関数ファイルを読み込む
-require_once __DIR__ . '/common/functions.php';
+require_once __DIR__ . '/../common/functions.php';
 
 // セッション開始
 session_start();
@@ -33,16 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<?php include_once __DIR__ . '/common/_head.html' ?>
+<?php include_once __DIR__ . '/../common/_head.html' ?>
 
 <body>
-    <?php include_once __DIR__ . '/common/_header.php' ?>
+    <?php include_once __DIR__ . '/../common/_header.php' ?>
 
     <main class="content_center wrapper">
         <div class="login_content">
             <h2 class="login_title">ログイン</h2>
 
-            <?php include_once __DIR__ . '/common/_errors.php' ?>
+            <?php include_once __DIR__ . '/../common/_errors.php' ?>
 
             <form class="login_form" action="" method="post">
                 <label class="email_label" for="email">メールアドレス</label>
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
 
-    <?php include_once __DIR__ . '/common/_footer.html' ?>
+    <?php include_once __DIR__ . '/../common/_footer.html' ?>
 </body>
 
 </html>

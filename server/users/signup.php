@@ -1,7 +1,7 @@
 <?php
 
 // 関数ファイルを読み込む
-require_once __DIR__ . '/common/functions.php';
+require_once __DIR__ . '/../common/functions.php';
 
 // 変数の初期化
 $email = '';
@@ -27,14 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="ja">
-<?php include_once __DIR__ . '/common/_head.html' ?>
+<?php include_once __DIR__ . '/../common/_head.html' ?>
 <body>
-    <?php include_once __DIR__ . '/common/_header.php' ?>
+    <?php include_once __DIR__ . '/../common/_header.php' ?>
 
     <main class="content_center wrapper">
         <div class="signup_content">
             <h2 class="signup_title">新規ユーザー登録</h2>
-            <?php include_once __DIR__ . '/common/_errors.php' ?>
+            <?php include_once __DIR__ . '/../common/_errors.php' ?>
             <form class="signup_form" action="" method="post">
                 <label class="email_label" for="email">メールアドレス</label>
                 <input type="email" name="email" id="email" placeholder="Email" value="<?= h($name) ?>">
@@ -50,6 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
 
-    <?php include_once __DIR__ . '/common/_footer.html' ?>
+    <?php include_once __DIR__ . '/../common/_footer.html' ?>
 </body>
 </html>
