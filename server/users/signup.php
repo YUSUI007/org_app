@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php include_once __DIR__ . '/../common/_errors.php' ?>
             <form class="signup_form" action="" method="post">
                 <label class="email_label" for="email">メールアドレス</label>
-                <input type="email" name="email" id="email" placeholder="Email" value="<?= h($name) ?>">
+                <input type="email" name="email" id="email" placeholder="Email" value="<?= h($email) ?>">
                 <label class="name_label" for="name">ユーザー名</label>
                 <input type="text" name="name" id="name" placeholder="UserName" value="<?= h($name) ?>">
                 <label class="password_label" for="password">パスワード</label>
