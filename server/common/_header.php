@@ -10,7 +10,7 @@
                 <p>
                     <?= $current_user['name'] ?>さん
                 </p>
-                <a class="header_logout_button" href="/org_app/users/logout.php" class="nav-link">ログアウト</a>
+                <a class="header_logout_button" href="/users/logout.php" class="nav-link">ログアウト</a>
             <?php else : ?>
                 <a class="header_login_button" href="login.php" class="nav-link">ログイン</a>
             <?php endif; ?>

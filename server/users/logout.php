@@ -3,6 +3,7 @@
 // セッション開始
 session_start();
 
+// $_SESSION の初期化
 $_SESSION = [];
 
 // クッキーのセッションIDを削除
